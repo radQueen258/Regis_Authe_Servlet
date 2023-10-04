@@ -8,17 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
 
     private static final String DB_USERNAME = "postgres";
     private static final String DB_PASSWORD = "postgres";
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/Accounts?useSSL=false";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/Accounts";
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -42,6 +41,7 @@ public class RegistrationServlet extends HttpServlet {
 
             int rowCount = preparedStatement.executeUpdate();
             dispatcher = request.getRequestDispatcher("registration.jsp");
+            dispatcher.forward(request,response);
 
             if (rowCount > 0) {
                 request.setAttribute("status", "Success");
@@ -49,8 +49,33 @@ public class RegistrationServlet extends HttpServlet {
                 request.setAttribute("status", "Failed");
             }
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+
+            //Code to print all name s in the database on my page as I log in
+            Statement statement = connection.createStatement();
+            ResultSet result = statement.executeQuery("SELECT * FROM users");
+
+            List<Users> usersList = new ArrayList<>();
+
+            while (result.next()) {
+
+                Users user = new Users();
+
+                user.setName(result.getString("uname"));
+                user.setEmail(result.getString("uemail"));
+                user.setPassword(result.getString("upwd"));
+                user.setMobile(result.getString("umobile"));
+                usersList.add(user);
+            }
+            request.setAttribute("usersList", usersList);
+            dispatcher = request.getRequestDispatcher("indexTab.jsp");
+            dispatcher.forward(request, response);
+            //System.out.println();
+            //end of code-------------------------------
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Database error: " + e.getMessage(), e);
         } finally {
             try {
                 connection.close();
@@ -58,13 +83,9 @@ public class RegistrationServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
-//        PrintWriter out = response.getWriter();
-//        out.println(uname);
-//        out.println(uemail);
-//        out.println(upwd);
-//        out.println(umobile);
 
     }
+
 
     @Override
     public void init() throws ServletException {

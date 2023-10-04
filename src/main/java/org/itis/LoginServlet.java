@@ -33,9 +33,26 @@ public class LoginServlet extends HttpServlet {
             preparedStatement.setString(2,upwd);
 
              ResultSet resultSet = preparedStatement.executeQuery();
+
+
+//             //Code to print all name s in the database on my page as I log in
+//            Statement statement = connection.createStatement();
+//            ResultSet result = statement.executeQuery("select * from users");
+//
+//             while (resultSet.next()) {
+//                // System.out.println(resultSet.getString("uname"));
+//
+//                 result.getString("uname");
+//                 resultSet.getString("uemail");
+//                 resultSet.getString("umobile");
+//             }
+//            System.out.println();
+//             //end of code-------------------------------
+
+
             if (resultSet.next()) {
                 session.setAttribute("name",resultSet.getString("uname"));
-                dispatcher = request.getRequestDispatcher("index.jsp");
+                dispatcher = request.getRequestDispatcher("indexTab.jsp");
             } else {
                 request.setAttribute("status", "Failed");
                 dispatcher = request.getRequestDispatcher("login.jsp");

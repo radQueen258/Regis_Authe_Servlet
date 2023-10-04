@@ -35,7 +35,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Unique Developer</a>
+			<a class="navbar-brand" href="#page-top">Eneting</a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -56,7 +56,7 @@
 					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
 							class="nav-link py-3 px-0 px-lg-3 rounded"
 							href="logout"><%=session.getAttribute("name")%></a></li>
-					
+
 				</ul>
 			</div>
 		</div>
@@ -68,7 +68,7 @@
 			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome To Unique Developer</h1>
+			<h1 class="masthead-heading text-uppercase mb-0">Welcome To Eneting</h1>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>
@@ -78,8 +78,8 @@
 				<div class="divider-custom-line"></div>
 			</div>
 			<!-- Masthead Subheading-->
-			<p class="masthead-subheading font-weight-light mb-0">Java
-				Development - Web Development - Python</p>
+			<p class="masthead-subheading font-weight-light mb-0">Internet Of Things
+				Ruby on Rails - Web Development - Python</p>
 		</div>
 	</header>
 	<!-- Portfolio Section-->
@@ -109,7 +109,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cabin.png"
+						<img class="img-fluid" src="assets/img/portfolio/artificial.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -124,7 +124,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cake.png"
+						<img class="img-fluid" src="assets/img/portfolio/coffee.png"
 							alt="..." />
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/circus.png"
+						<img class="img-fluid" src="assets/img/portfolio/webdev.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -154,7 +154,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/game.png"
+						<img class="img-fluid" src="assets/img/portfolio/internetofthings.png"
 							alt="..." />
 					</div>
 				</div>
@@ -169,7 +169,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/safe.png"
+						<img class="img-fluid" src="assets/img/portfolio/robot.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -184,7 +184,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/submarine.png"
+						<img class="img-fluid" src="assets/img/portfolio/cybersecurity.png"
 							alt="..." />
 					</div>
 				</div>
@@ -385,7 +385,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cabin.png" alt="..." />
+									src="assets/img/portfolio/artificial.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -430,7 +430,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cake.png" alt="..." />
+									src="assets/img/portfolio/coffee.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -475,7 +475,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/circus.png" alt="..." />
+									src="assets/img/portfolio/webdev.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -519,7 +519,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/game.png" alt="..." />
+									src="assets/img/portfolio/internetofthings.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -564,7 +564,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/safe.png" alt="..." />
+									src="assets/img/portfolio/robot.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -608,7 +608,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/submarine.png" alt="..." />
+									src="assets/img/portfolio/cybersecurity.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
